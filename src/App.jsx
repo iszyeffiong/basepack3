@@ -1,8 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Dashboard from './components/Dashboard';
-import TransactionList from './components/TransactionList';
+import Home from './pages/Home';
+import Explore from './pages/Explore';
+import Network from './pages/Network';
+import Bridge from './pages/Bridge';
+import Swap from './pages/Swap';
+import NFTs from './pages/NFTs';
+import Earn from './pages/Earn';
 import './App.css';
 
 function App() {
@@ -39,8 +44,15 @@ function App() {
         </aside>
         
         <div className="dashboard-area">
-          <Dashboard />
-          <TransactionList />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/explore" element={<Explore />} />
+            <Route path="/network" element={<Network />} />
+            <Route path="/bridge" element={<Bridge />} />
+            <Route path="/swap" element={<Swap />} />
+            <Route path="/nfts" element={<NFTs />} />
+            <Route path="/earn" element={<Earn />} />
+          </Routes>
         </div>
       </main>
     </div>
