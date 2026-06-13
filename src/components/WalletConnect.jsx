@@ -38,3 +38,4 @@ const WalletConnect = () => {
 export default WalletConnect;
 
 // update 8
+// update 16
