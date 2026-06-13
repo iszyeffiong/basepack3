@@ -1,0 +1,110 @@
+.tx-list-wrapper {
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.tx-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-view-all {
+  color: var(--accent-cyan);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(0, 229, 255, 0.1);
+  transition: all var(--transition-fast);
+}
+
+.btn-view-all:hover {
+  background: rgba(0, 229, 255, 0.2);
+}
+
+.tx-table-container {
+  overflow-x: auto;
+}
+
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tx-table th {
+  padding: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tx-table td {
+  padding: 1rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(42, 54, 85, 0.4);
+}
+
+.tx-row {
+  transition: background var(--transition-fast);
+}
+
+.tx-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tx-hash {
+  color: var(--base-blue);
+  cursor: pointer;
+  font-family: monospace;
+}
+
+.tx-hash:hover {
+  text-decoration: underline;
+  color: var(--accent-cyan);
+}
+
+.tx-amount {
+  font-weight: 600;
+}
+
+.tx-time {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.tx-type {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tx-type.transfer { background: rgba(0, 82, 255, 0.2); color: #82b1ff; }
+.tx-type.mint { background: rgba(156, 39, 176, 0.2); color: #e1bee7; }
+.tx-type.swap { background: rgba(255, 152, 0, 0.2); color: #ffe0b2; }
+
+.tx-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.tx-status::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.tx-status.success::before { background-color: #00E676; }
+.tx-status.success { color: #00E676; }
+
+.tx-status.pending::before { background-color: #FFC107; animation: pulse-glow 1.5s infinite; }
+.tx-status.pending { color: #FFC107; }

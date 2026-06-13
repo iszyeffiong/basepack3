@@ -1,0 +1,43 @@
+.wallet-connect-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-connect {
+  background: var(--base-blue);
+  color: var(--text-primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(0, 82, 255, 0.3);
+}
+
+.btn-connect:hover {
+  background: var(--base-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 82, 255, 0.4);
+}
+
+.btn-connect.connected {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+}
+
+.btn-connect.connected:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-cyan);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-cyan);
+  border-radius: 50%;
+  animation: pulse-glow 2s infinite;
+}
